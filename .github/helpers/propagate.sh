@@ -4,6 +4,5 @@ DIRECTORY=$1
 
 for dirname in $(ls ${DIRECTORY}); do
     echo " >> $dirname"
-    cp -pr ${DIRECTORY}/.shared/* "${DIRECTORY}/${dirname}/" || true
-    cp -pr ${DIRECTORY}/.shared/.* "${DIRECTORY}/${dirname}/" || true
+    rsync -av --progress ${DIRECTORY}/.shared/ "${DIRECTORY}/${dirname}/" --exclude ".."
 done
