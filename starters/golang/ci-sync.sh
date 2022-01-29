@@ -1,2 +1,2 @@
 #!/bin/sh
-exec svn export https://github.com/riotkit-org/pipelines/trunk/pipelines/golang/.github --force
+exec svn export https://github.com/riotkit-org/pipelines/branches/release/pipelines/golang/.github --force
