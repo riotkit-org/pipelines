@@ -29,7 +29,10 @@ jobs:
                   git config --global user.email "github@example.org"
                   git config --global user.name "GitHub Actions"
                   
+                  
+                  set -x;
                   git add starters pipelines
                   git commit -m "chore: propagate files [skip ci]" || true
-                  git remote -vvv
+                  git branch -D release || true
+                  git checkout -b release
                   git push --set-upstream origin release --force
