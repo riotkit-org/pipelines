@@ -27,6 +27,6 @@ jobs:
                   git config --global user.email "github@example.org"
                   git config --global user.name "GitHub Actions"
                   
-                  git add .github
+                  git add starters pipelines
                   git commit -m "chore: propagate files [skip ci]" || true
                   git push --force
