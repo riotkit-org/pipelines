@@ -6,9 +6,7 @@
 
 name: Propagate shared structure
 on:
-    schedule:
-        - cron: "15 17 * * *"
-    workflow_dispatch:
+    push:
 
 jobs:
     propagate:
@@ -30,5 +28,5 @@ jobs:
                   git config --global user.name "GitHub Actions"
                   
                   git add .github
-                  git commit -m "chore: propagate files" || true
+                  git commit -m "chore: propagate files [skip ci]" || true
                   git push --force
