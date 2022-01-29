@@ -9,7 +9,3 @@ upstream:
     directory: /pipelines/python-release-on-tag
     ref: main
   updateStrategy: resource-merge
-pipeline:
-  mutators:
-    - exec: sed -e 's|##IMAGE_NAME##|your-org/image-name|'
-    - exec: sed -e 's|##PYTHON_VERSION##|3.9|'
