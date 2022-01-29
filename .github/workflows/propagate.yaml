@@ -7,6 +7,8 @@
 name: Propagate shared structure
 on:
     push:
+        branches:
+            - 'main'
 
 jobs:
     propagate:
@@ -29,4 +31,6 @@ jobs:
                   
                   git add starters pipelines
                   git commit -m "chore: propagate files [skip ci]" || true
+                  git checkout -b release || true
+                  git checkout release
                   git push --force
