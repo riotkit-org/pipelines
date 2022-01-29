@@ -1,0 +1,22 @@
+# ============================================
+#  Propagates files from
+#    - pipelines/.shared/* to pipelines/*/*
+#    - packs/.shared/* to packs/*/*
+# ============================================
+
+name: Propagate shared structure
+on:
+    schedule:
+        - cron: "15 17 * * *"
+
+jobs:
+    propagate:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+
+            # - name: Copy files
+            # - name: Commit and push

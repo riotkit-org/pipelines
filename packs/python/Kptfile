@@ -1,0 +1,20 @@
+---
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+    name: pipelines
+upstream:
+    type: git
+    git:
+        repo: https://github.com/riotkit-org/pipelines
+        directory: /pipelines/python-release-on-tag
+        ref: main
+    updateStrategy: resource-merge
+
+#
+# NOTICE: Customize those variables to fit your project needs
+#
+pipeline:
+    mutators:
+        - exec: "sed -e 's#{{IMAGE_NAME}}#your-org/image-name#'"
+        - exec: "sed -e 's#{{PYTHON_VERSION}}#3.9#'"
