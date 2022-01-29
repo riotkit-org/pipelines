@@ -8,6 +8,7 @@ name: Propagate shared structure
 on:
     schedule:
         - cron: "15 17 * * *"
+    workflow_dispatch:
 
 jobs:
     propagate:
@@ -18,5 +19,13 @@ jobs:
               with:
                   fetch-depth: 0
 
-            # - name: Copy files
-            # - name: Commit and push
+            - name: Copy files
+              run: |
+                  bash .github/helpers/propagate.sh starters
+                  bash .github/helpers/propagate.sh pipelines
+
+            - name: Commit and push
+              run: |
+                  git add .github
+                  git commit -m "chore: propagate files" || true
+                  git push --force

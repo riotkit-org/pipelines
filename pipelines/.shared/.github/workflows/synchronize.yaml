@@ -25,5 +25,5 @@ jobs:
             - name: Commit and push
               run: |
                   git add .github
-                  git commit -m "chore: synchronize pipelines"
-                  git push --force || true
+                  git commit -m "chore: synchronize pipelines" || true
+                  git push --force
