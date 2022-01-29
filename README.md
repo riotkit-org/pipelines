@@ -1,7 +1,11 @@
 GitHub Actions pipelines catalog
 ================================
 
-Shared pipelines designed like in Jenkins X.
+Shared, generic pipelines synchronized to project repositories by using a "Synchronize pipelines" pipeline inside each project.
+
+![img.png](docs/pipeline.png)
+
+![img.png](docs/commit.png)
 
 ## starters
 
