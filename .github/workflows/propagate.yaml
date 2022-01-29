@@ -31,4 +31,5 @@ jobs:
                   
                   git add starters pipelines
                   git commit -m "chore: propagate files [skip ci]" || true
+                  git remote -vvv
                   git push --set-upstream origin release --force
