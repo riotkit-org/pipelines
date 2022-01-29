@@ -19,7 +19,7 @@ Everytime, when a new repository is created a structure from `packs/{{ technolog
 
 ## pipelines
 
-Shared pipelines are synchronized by running a pipeline "synchronize.yaml" manually from GitHub Actions panel.
+Shared pipelines are synchronized by running a pipeline "Synchronize pipelines" manually from GitHub Actions panel.
 
 ### Usage and contributions
 
